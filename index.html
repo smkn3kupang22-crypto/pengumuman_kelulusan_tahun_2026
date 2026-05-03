@@ -1,0 +1,1008 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pengumuman Kelulusan SMKN 3 Kupang</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #1e3a8a 0%, #3b82f6 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .header {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #f59e0b, #fbbf24, #f59e0b);
+        }
+
+        .logo {
+            width: 100px;
+            height: 100px;
+            margin: 0 auto 20px;
+            border-radius: 50%;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(245, 158, 11, 0.3);
+            border: 4px solid #f59e0b;
+        }
+
+        .logo img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .school-name {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: #1e3a8a;
+            margin-bottom: 10px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .main-title {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: #1e40af;
+            margin-bottom: 5px;
+        }
+
+        .academic-year {
+            font-size: 1.1rem;
+            color: #64748b;
+            font-weight: 500;
+        }
+
+        .countdown-section {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            margin-bottom: 30px;
+        }
+
+        .countdown-title {
+            font-size: 1.3rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 20px;
+        }
+
+        .countdown-info {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+            color: white;
+            padding: 20px;
+            border-radius: 15px;
+            margin-bottom: 20px;
+        }
+
+        .countdown-time {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 10px;
+        }
+
+        .countdown-display {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .countdown-item {
+            background: rgba(255,255,255,0.2);
+            backdrop-filter: blur(10px);
+            padding: 20px 10px;
+            border-radius: 15px;
+            font-weight: 700;
+            font-size: 1.2rem;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .countdown-label {
+            font-size: 0.8rem;
+            margin-top: 5px;
+            opacity: 0.9;
+        }
+
+        .waiting-message {
+            background: linear-gradient(135deg, #f59e0b, #fbbf24);
+            color: white;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 1.2rem;
+            font-weight: 500;
+            box-shadow: 0 20px 40px rgba(245, 158, 11, 0.3);
+        }
+
+        .check-form {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .form-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 20px;
+        }
+
+        .nisn-input {
+            width: 100%;
+            max-width: 350px;
+            padding: 18px 20px;
+            font-size: 1.1rem;
+            border: 3px solid #e5e7eb;
+            border-radius: 15px;
+            text-align: center;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+        }
+
+        .nisn-input:focus {
+            outline: none;
+            border-color: #f59e0b;
+            box-shadow: 0 0 0 4px rgba(245, 158, 11, 0.1);
+            transform: translateY(-2px);
+        }
+
+        .check-btn {
+            background: linear-gradient(135deg, #f59e0b, #fbbf24);
+            color: white;
+            border: none;
+            padding: 18px 40px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border-radius: 15px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 10px 25px rgba(245, 158, 11, 0.3);
+        }
+
+        .check-btn:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 35px rgba(245, 158, 11, 0.4);
+        }
+
+        .check-btn:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .result {
+            margin-top: 30px;
+            padding: 30px;
+            border-radius: 20px;
+            text-align: center;
+            font-size: 1.1rem;
+            font-weight: 600;
+            min-height: 120px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .result.success {
+            background: linear-gradient(135deg, #10b981, #34d399);
+            color: white;
+        }
+
+        .result.fail {
+            background: linear-gradient(135deg, #ef4444, #f87171);
+            color: white;
+        }
+
+        .result.not-found {
+            background: linear-gradient(135deg, #6b7280, #9ca3af);
+            color: white;
+        }
+
+        .result-details {
+            background: rgba(255,255,255,0.1);
+            padding: 20px;
+            border-radius: 15px;
+            margin-top: 15px;
+        }
+
+        .detail-row {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 10px;
+            font-size: 1rem;
+        }
+
+        .important-info {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            padding: 25px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+            margin-top: 30px;
+            border-left: 6px solid #f59e0b;
+        }
+
+        .important-title {
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .important-text {
+            color: #374151;
+            line-height: 1.7;
+        }
+
+        .spinner {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            border: 4px solid rgba(255,255,255,0.3);
+            border-radius: 50%;
+            border-top-color: #fff;
+            animation: spin 1s ease-in-out infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .header {
+                padding: 25px 20px;
+            }
+            
+            .school-name {
+                font-size: 1.5rem;
+            }
+            
+            .logo {
+                width: 80px;
+                height: 80px;
+            }
+            
+            .countdown-display {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            
+            .check-form {
+                padding: 30px 25px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .countdown-display {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <div class="logo">
+               <div
+            <div class="school-name">SMKN 3 Kupang</div>
+            <div class="main-title">Pengumuman Kelulusan Siswa </div>
+            <div class="academic-year">Tahun Ajaran 2025/2026</div>
+        </div>
+
+        <!-- Countdown Section -->
+        <div class="countdown-section">
+            <div class="countdown-title">
+                <i class="fas fa-clock"></i> Pengumuman Kelulusan SMKN 3 Kupang
+            </div>
+            <div class="countdown-info">
+                <div class="countdown-time">
+                    <i class="fas fa-calendar-day"></i> Senin, 04 Mei 2026
+                </div>
+                <div style="font-size: 1.3rem; font-weight: 700;">Pukul 00:01 WIB</div>
+            </div>
+            <div id="countdownDisplay" class="countdown-display"></div>
+        </div>
+
+        <!-- Waiting Message or Check Form -->
+        <div id="waitingMessage" class="waiting-message" style="display: none;">
+            <i class="fas fa-heart" style="font-size: 2rem; margin-bottom: 15px;"></i>
+            <div>Saat ini belum waktunya untuk melihat pengumuman.</div>
+            <div>Silakan banyak berdoa, semoga hasilnya memuaskan.</div>
+        </div>
+
+        <div id="checkForm" class="check-form" style="display: none;">
+            <div class="form-title">
+                <i class="fas fa-graduation-cap"></i> Cek Status Kelulusan
+            </div>
+            <input type="text" id="nisnInput" class="nisn-input" placeholder="Masukkan NISN Anda (10 digit)" maxlength="10">
+            <button id="checkBtn" class="check-btn">
+                <i class="fas fa-search"></i> Cek Kelulusan
+            </button>
+            <div id="result" class="result" style="display: none;"></div>
+        </div>
+
+        <!-- Important Info -->
+        <div class="important-info">
+            <div class="important-title">
+                <i class="fas fa-exclamation-triangle"></i>
+                Pengumuman Penting
+            </div>
+            <div class="important-text">
+                Untuk mendapatkan <strong>Surat Keterangan Lulus</strong>, silakan hubungi Bagian Administrasi sekolah pada jam kerja. Alumni menggunakan pakaian bebas rapih, bersepatu dan baju berkerah, .
+        </div>
+    </div>
+
+    <script>
+        // Data siswa (tidak ditampilkan di halaman)
+        const students = [
+            { nisn: '1234567890', name: 'Sheena Aulia', kelas: 'XII MPLB', status: 'LULUS' },
+			{nisn: '0077115268',name: 'Adi Renhard Henuk', kelas:'XII PERHOTELAN',status:'LULUS' },
+			{nisn:	'0087681755', name:	'Adolfina Sheren Apriani Ndoen', kelas:	'XII PERHOTELAN',status:'LULUS'	},
+			{ 	nisn:	'0081988832',name:	'Alden Aril Sereh',	kelas:	'XII PERHOTELAN'	,	status:	'LULUS'	},
+			{	nisn:	'0078271147',name:	'Betje Sofiana Devita Louk Fanggi',	kelas:	'XII PERHOTELAN'	,	status:	'LULUS'	},
+{	nisn:		'0073788364'	,	name:	'Danial Boimau Timo'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0083404100'	,	name:	'David Juancrist Soni'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0084714568'	,	name:	'Delaya Tobe'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0068308265'	,	name:	'Delfan Roberto Fay'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0089659542'	,	name:	'Elisabeth Vionarty Labina'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0084377655'	,	name:	'Feby Mariance Atamani'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0077765267'	,	name:	'Frederika Paulin Dewanti Astrit Kosat'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0081398484'	,	name:	'Hendra Jastin Taneo'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0064794039'	,	name:	'Imanuel R. Ndun'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0083045141'	,	name:	'Karisna Yunda Taneo'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0075834245'	,	name:	'Kristina Marialeta Olo'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0084212162'	,	name:	'Maria Goreti Atitus'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0083985031'	,	name:	'Maria Gracela P. Wila'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0085323276'	,	name:	'Maria Jesica Tafinme'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0085158748'	,	name:	'Maria Jessica Marsi'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0087501181'	,	name:	'Nadine Meili Zahrani'	,	kelas:	'XII	PERHOTELAN'	,		status:	'TIDAK LULUS'	},
+{	nisn:		'0071546256'	,	name:	'Olivia Louisa Fafo'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0076919566'	,	name:	'Orce Marinda Beukliu'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0071437121'	,	name:	'Putriana Aprila Peni'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'3145583805'	,	name:	'Rafhael Andhika Anwar'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0045877415'	,	name:	'Srisandi Tanesib'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0082075045'	,	name:	'Taela Fren Wiliams Bekuliu'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0081381985'	,	name:	'Talitha Renasari Osingmahi'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0089024429'	,	name:	'Tania Yusmina Rut Nabunome'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0062619343'	,	name:	'Tegu Beiya'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0081106691'	,	name:	'Anastasya Anaci Sooai'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0057693003'	,	name:	'Anjela Marince Abi'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0086130621'	,	name:	'Bintang Fajar Kasse'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0088115335'	,	name:	'Chezania Erdina Kiik'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0088537751'	,	name:	'Denti Tasuib'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0087772364'	,	name:	'Desri Thay Ndun'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0089553949'	,	name:	'Deswita Anastasia Maharani Tpoenifu'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0083122696'	,	name:	'Elsi Imelda Boimau'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0088906820'	,	name:	'Fernando Jeskian Tores Mowata'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0088240171'	,	name:	'Firjan Putra Herman Mae'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0072775821'	,	name:	'Indri Mandala'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0072360277'	,	name:	'Indro Seprianus Aty'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0082476438'	,	name:	'Lewi Nguru'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0074032579'	,	name:	'Lidia Nasrani Fallo'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0088005007'	,	name:	'Marlin Atalia  Yosman Lael'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0088834084'	,	name:	'Marlin Jumri Janiati Letkamang'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0083753366'	,	name:	'Martin Christian Elzed Henuk'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0087203884'	,	name:	'Medison Candra Saetban'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0079249750'	,	name:	'Randi Novanto Koen'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0087894244'	,	name:	'Rhadit Juliano Tefamnasi'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0082335504'	,	name:	'Ricardo Saytro Fallo'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0075009749'	,	name:	'Tirta Wening Mahanani Kinasehan'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0086048034'	,	name:	'Tria Sudiana Banu'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0076831979'	,	name:	'Vebriana Skolastika Kolo'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0085395718'	,	name:	'Victoria Novantri Nggoek'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0084172374'	,	name:	'Arin Melani Bokimnasi'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0075716848'	,	name:	'Arista Anggel Napa'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0082590049'	,	name:	'Arky Samuel Gadja Leba'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0087235204'	,	name:	'Chindy Amelia Molle'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0074391562'	,	name:	'Dinda Gresni Ardiana Lusi'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0075407519'	,	name:	'Dion E. R. Totos'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0084562840'	,	name:	'Evelin Jesica Teti'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0072833988'	,	name:	'Fransiska Tunliu'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0081288413'	,	name:	'Geby Cristina Heli'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0063176250'	,	name:	'Irma Leku'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0094700181'	,	name:	'Jenifer Alexandra Evalisty Fallo'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0084780750'	,	name:	'Liontin Avnil Lado'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0085075556'	,	name:	'Magdalena Anjeli Nahak'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0074581880'	,	name:	'Mefrisel Kase'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0086596147'	,	name:	'Megy Rifella Interristi Masiweni'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0088164655'	,	name:	'Meiiski Yosinta Liunokas'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0066648695'	,	name:	'Meyke Sefanya Sibu'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0088385777'	,	name:	'Monika Putridel Manu'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0083495249'	,	name:	'Rochus Gonzales Fallo'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0081222702'	,	name:	'Safitri Azsalea Bianca Thomas'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0083163500'	,	name:	'Sandy Peterson Laoe'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0079000594'	,	name:	'Sania Agustince Langke'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0089538283'	,	name:	'Sarai Norlina Malaimakani'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'3087748907'	,	name:	'Viola L'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0065579171'	,	name:	'Widia Rihi'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0058749077'	,	name:	'Yance Nenobahan'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0081328631'	,	name:	'Avrilia Merlina Sakan'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0083003142'	,	name:	'Ayu Alfia Fallo'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0081580618'	,	name:	'Bendrik Kasse'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0074348426'	,	name:	'Berto Oka Nofanto Atonis'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0071673599'	,	name:	'Christine Derina Amelia Mellu'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0083643093'	,	name:	'Divanny Loe'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0075250288'	,	name:	'Ekhlesia Aurella Christabel Eleyzen'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0088120757'	,	name:	'Ela Danga Hamu Ndewa'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0082453914'	,	name:	'Emerita Marques'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0061786859'	,	name:	'Gibson Moryantis Nenotek'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0076519014'	,	name:	'Gregorio Didi Armi Anthonio Ola'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0086229233'	,	name:	'Johan Cristiano Boimata'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0094306574'	,	name:	'Juan Farel Mone Udju'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0078794885'	,	name:	'Junior Ujang Effendy'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0097728995'	,	name:	'Marfel Adythia Pandi'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0085140183'	,	name:	'Maria Floresita Martins'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0085026412'	,	name:	'Muh Satria Bakri'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0082810766'	,	name:	'Muhammad Yusuf'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0062014770'	,	name:	'Nofita Mbuik'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0079110458'	,	name:	'Novarista Martin Koa'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0074072361'	,	name:	'Selviana Bangngu'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0061001737'	,	name:	'Septian Nesimnasi'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0085387705'	,	name:	'Sera Asri Yuliana Sae'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0055365963'	,	name:	'Serly Armiyanti Kolo'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0084166028'	,	name:	'Syaifika Ade Putrid'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0089165765'	,	name:	'Yovita Angela Meo Nua Ngete'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0072153052'	,	name:	'Yuliana Usfinit'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0079076731'	,	name:	'Yurni Lopo'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+{	nisn:		'0082724528'	,	name:	'Yuvelia Prianka Olla'	,	kelas:	'XII	PERHOTELAN'	,		status:	'LULUS'	},
+
+{	nisn:		'0081471866'	,	name:	'Aldo Alexa Taneo'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0084030348'	,	name:	'Alecxa Chrystiani Junya Bere'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0085792116'	,	name:	'Amaz Kehagitu'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0086521687'	,	name:	'Cathy Ivana Noveliani Sonbait'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'3088301818'	,	name:	'Dena Marsandi Kause'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0076920450'	,	name:	'Dersun Davit Neno'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0079490312'	,	name:	'Desnalia Anggela Kabes'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0088906248'	,	name:	'Gisela Pricilia Nasrani Dewalu'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0082441632'	,	name:	'Gracia Aulia Anastasia Pandie'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'3079077655'	,	name:	'Hisana Takiyah Rahmadani'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0076168977'	,	name:	'Hutri Amelia Liufeto'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0071462032'	,	name:	'Ignasius Beni Nowinrian'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0086869374'	,	name:	'Jesica Maria Angelin'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0075302643'	,	name:	'Jevan Sandres Tanu'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0081927785'	,	name:	'Ledya Indriyani Napu Laiskodat'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0072181549'	,	name:	'Margareta Dengi'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0074982630'	,	name:	'Maria Britney Sayang Huller'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0088846827'	,	name:	'Maria Elisabet Basi Sogen'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0076698942'	,	name:	'Maria Goreti Banu'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0075720466'	,	name:	'Nanda Arance Manek'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0071938206'	,	name:	'Naomi Selvince Eklemis'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0095791955'	,	name:	'Skolastika Prysilia T Mekan'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0089049094'	,	name:	'Tirsa Jelitanti Boykope'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0085801026'	,	name:	'Veronika Flaviana Ure Huller'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0089403229'	,	name:	'Willyam  Willa'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0086698821'	,	name:	'Angel Cleren Chrysty Kana'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0086998052'	,	name:	'Angelina Seran'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0067083069'	,	name:	'Chessy Noval Andita Selan'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0067021392'	,	name:	'Desri Nufeto'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0081393532'	,	name:	'Dini Febrianthy Koro'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0086208398'	,	name:	'Fendria Andini'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0087922214'	,	name:	'Fransina De Anjelica Lenama'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0085481989'	,	name:	'Gracia Martha Mangare'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0083253532'	,	name:	'Gratiana Faran Nahak'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0082563858'	,	name:	'Imanuel Lasa'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0088177219'	,	name:	'Indah Andriani Putri'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0085699135'	,	name:	'Indah Gracia Radjalawa'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0089827716'	,	name:	'Jasmin Agustin Fangidae'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0065317233'	,	name:	'Jihan'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0085012087'	,	name:	'Jumiantri Sari Iba'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0072056804'	,	name:	'Lili Jufangka Tiumuli'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'3087922583'	,	name:	'Maria Kristina Sekab'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0044608748'	,	name:	'Maria Skolastika Welin Manuk'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0082560679'	,	name:	'Maria Trinovalia Badon'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0066466523'	,	name:	'Merlina Prada Lema'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0088736895'	,	name:	'Mesri Rahayu'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0096690855'	,	name:	'Nayyara Felicia Menno Bire'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0085575338'	,	name:	'Nice Evenly Hawu'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0088090035'	,	name:	'Ramadniya Giras Faustina'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0088490744'	,	name:	'Sri Betari Agustina Demang'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0079580237'	,	name:	'Yuanda Edo'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0084207822'	,	name:	'Zandewy Halanteti Mamea'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0089566887'	,	name:	'Asa Heltorio Ello'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0085067676'	,	name:	'Azarya Astika Tisna'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0089856062'	,	name:	'Bernadetha Gonsela Salu'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0083961854'	,	name:	'Chindy Yuanita Cristiani Pah'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0077522715'	,	name:	'Danisa Novianti Mahulete'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0077580564'	,	name:	'Elisabeth Maharani Adelia Laumou'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0087904150'	,	name:	'Esra Febrina Taemnanu'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0071241713'	,	name:	'Gallang Issa Paulus Dillak'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0082705704'	,	name:	'Giovanno Patrick Oematan'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0074051977'	,	name:	'Harun Paulus'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0082765175'	,	name:	'Hildegardis Kaesnube'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0074428544'	,	name:	'Jelia Da Costa Lopes'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0075544219'	,	name:	'Jenry You Manto Abanat'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0081431532'	,	name:	'Junina Evinia Alves Sarmento'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0064768783'	,	name:	'Kartika Remalya Tatibun'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0085341251'	,	name:	'Kesya Aprilia Sone'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0073475101'	,	name:	'Lusia Abuhera'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0094499721'	,	name:	'Mefen Ibrahim Tapen'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0072513155'	,	name:	'Monika Riwani Anarti Nome'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0089044791'	,	name:	'Mutia Maryani Boisala'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0074834360'	,	name:	'Mutiara Nur Shalehah'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0076651963'	,	name:	'Novrianti Ito'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0081731564'	,	name:	'Olivia Neunub'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0095705455'	,	name:	'Reni Aurelia Bedda'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0085561390'	,	name:	'Siti Sumanja'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0087654464'	,	name:	'Stephanie Dorkas Maria Concetta'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0089168628'	,	name:	'Timon Erikson Natonis'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0082937128'	,	name:	'Victoria F. Therik'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0082422359'	,	name:	'Wini Widiati Isliko'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+{	nisn:		'0088494679'	,	name:	'Aisyahilia'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0093254704'	,	name:	'Amelia Marlince  Joostensz'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0085025205'	,	name:	'Anastasia Marcheilla Ludony'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0056301582'	,	name:	'Anastasya Michelia Kea Enge'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0085915981'	,	name:	'Aprilia Pandeirot'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0078771321'	,	name:	'Chintami Ester Hermarhansdin Kore'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0083830986'	,	name:	'Christin Cornelia Thei'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0084294973'	,	name:	'Decha Felmi Aurellya Saekoko'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0082697536'	,	name:	'Dwinsel Angelika Timuli'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0074864972'	,	name:	'Elisabeth Mangngi'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0083617674'	,	name:	'Grace Olivia Kenjam'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0081712016'	,	name:	'Gracia Virginia Panab'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0085546165'	,	name:	'Lydia Ranny Koamesah'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0081114022'	,	name:	'Mentari Anastasia Nautani'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0081250731'	,	name:	'Nadya Talita Sunbanu'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0083405527'	,	name:	'Pretty Melanie Soru'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'3079509047'	,	name:	'Rohma Soraya Putri Sutrisno'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0063493139'	,	name:	'Rosalinda Laha'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0078466256'	,	name:	'Sasalfa Nana Ardiana'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0086399920'	,	name:	'Siti Raisah Maimuna Syamsuddin'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0088636689'	,	name:	'Susana Aplonia Fina'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0084876029'	,	name:	'Syahila Tuzaefa'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0083639323'	,	name:	'Tasya Aprilia Sone'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0087506801'	,	name:	'Wilhelmina Sali'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0086745008'	,	name:	'Anastasia Hilda Obe'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0145496983'	,	name:	'Andini Aurelia Sirvando Sa u'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0078683617'	,	name:	'Angelfinda Naomi Taklale'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0083454654'	,	name:	'Angelika Selan'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0086780759'	,	name:	'Chatrine Sarlen Sofia Kause'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0083001875'	,	name:	'Chicilia Esterlitha Gorang'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0086025837'	,	name:	'Chika Daniella Radjab'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0081713972'	,	name:	'Chindy Aulia Radja'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0088952241'	,	name:	'Cindy Anjela Rini'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0046926343'	,	name:	'Desi Defince Koto'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0074312296'	,	name:	'Elis Marine Mau'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0076832451'	,	name:	'Elisabeth Riska Missa'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0066719288'	,	name:	'Erlin Sendow'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0092864580'	,	name:	'Jeniever Aurel Gricela Tjung Miadi'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0089492414'	,	name:	'Lala Messakh'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0082068272'	,	name:	'Lauren Yuspina Maibana'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0089847103'	,	name:	'Maria Erlansia Agberta Jo'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0079203782'	,	name:	'Maria Reciana Abuk'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'3076448403'	,	name:	'Marla Stefani Amalo'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0088949042'	,	name:	'May Fiandra Clareneh Athena Malessy'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0071021596'	,	name:	'Nance Missa'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0087937329'	,	name:	'Nirwana Alamanda Bethseba Toy'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0076122266'	,	name:	'Sofia Natalia Dange'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0056277788'	,	name:	'Sofianti M. Nomleni'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0061529288'	,	name:	'Tirza Anugrani Sadukh'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'3071516749'	,	name:	'Wulan Mesakh'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0087921680'	,	name:	'Zhela Prety Mbau'	,	kelas:	'XII	KECANTIKAN DAN SPA'	,		status:	'LULUS'	},
+{	nisn:		'0074984798'	,	name:	'Alfalijen Beukliu'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0079546346'	,	name:	'Allysa Chandra Beukliu'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0087247964'	,	name:	'Anasta Yulian Seo'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0086481180'	,	name:	'Celine Queeny Go'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0082740237'	,	name:	'Cessy Saljian Oematan'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0077226323'	,	name:	'Delasri Amtaran'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0081026798'	,	name:	'Dinda Apriyani Putri Berelaku'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0085971715'	,	name:	'Dyani Winsri Arnesta Samenel'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0085807749'	,	name:	'Elisabeth Labaona'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0086898318'	,	name:	'Fendria Alinski'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0084312293'	,	name:	'Fitriani Helena Orance Selan'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0086310777'	,	name:	'Galang Anderias Aronis'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0084069515'	,	name:	'Januaria Sisilia Doe Wale'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0075110391'	,	name:	'Jelita Semart Lakapu'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0088321729'	,	name:	'Karisa Imanuela Panie'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0089195525'	,	name:	'Katarina Aleksandria Leu Usfinit'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0084840386'	,	name:	'Ledy Marsiela Talan'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0079216194'	,	name:	'Lidya Magdalena Gabriela Manuk'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0087813688'	,	name:	'Makdalena Lulu Tuka'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0088755895'	,	name:	'Mefin Pinis'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0085438094'	,	name:	'Meiliana Monika Selan'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0082568520'	,	name:	'Melan Afrianti Thome'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0085133912'	,	name:	'Naema Prelisa Nubatonis'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0076081855'	,	name:	'Naomi Pethan'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0061521053'	,	name:	'Oksiana Ome'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0088521922'	,	name:	'Prilita Kobis'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0072399646'	,	name:	'Prisilia Anika Pellokila'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0085129270'	,	name:	'Puan Maharani Lepa'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0088388776'	,	name:	'Susana Taebenu'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0086488334'	,	name:	'Titin Martilda Takesan'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0084935322'	,	name:	'Tresia Agustina Metto'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0081280087'	,	name:	'Angela Aprilia Anugra Taneo'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0088936257'	,	name:	'Angelyca Felesia Tabana'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0086759062'	,	name:	'Anisia Baitanu'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0089713906'	,	name:	'Chelsy Mizelle Talan'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0081653589'	,	name:	'Chi Soleha Bahweres'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0079074558'	,	name:	'Destri Anggela Damavis Kune'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0083844604'	,	name:	'Devi Reinata Putri Maromon'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0086646090'	,	name:	'Elsadai Akresia Ton'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0083542309'	,	name:	'Esril Ripela Baun'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0087413443'	,	name:	'Galani Pricenza Ndoki'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0089795553'	,	name:	'Gereth Enda'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0087517481'	,	name:	'Henderina Tamelab'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0087969062'	,	name:	'Jelloruth Novindi Talan'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0087092596'	,	name:	'Jesika Olla'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0087650610'	,	name:	'Katarina Bay'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0087248895'	,	name:	'Kezya Melani Irene Napa'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0089927569'	,	name:	'Maria Melania Bria'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0093478591'	,	name:	'Marizya Eryanti Bansole'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0086157456'	,	name:	'Melan Noviantry Sapay'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0088443310'	,	name:	'Merlin Taga'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0088270270'	,	name:	'Natalie Gracie Buan'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0075459891'	,	name:	'Nataly Christine Bilaut'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0079435786'	,	name:	'Putri Imanuela Klali'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0083849129'	,	name:	'Rambu Putri Eunike Pitmalo'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0071736945'	,	name:	'Retni Nguru'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0089664162'	,	name:	'Rosina Theresia Tael'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0089910004'	,	name:	'Stivany  Antonia Malelak'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0081160511'	,	name:	'Yulianti Marsanda Boboy'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0086516019'	,	name:	'Yuningsi  Boikope'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0082413399'	,	name:	'Arlin Wulandari Naat'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0082181639'	,	name:	'Catryn Shintya Kale Modjo'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0082407714'	,	name:	'Chintha Tri Handayana Hilli'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0075978410'	,	name:	'Christina Elisabeth Tabun'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0086497032'	,	name:	'Dista Stifany Ello'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0086054486'	,	name:	'Enjelika Gawu'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0075816741'	,	name:	'Ester Natonis'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0082121251'	,	name:	'Ibanez Beathrix Dael'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0081209527'	,	name:	'Indri Aryanti Naubnome'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0082187693'	,	name:	'Jesika Sindi Tanesab'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0087548204'	,	name:	'Juany Nitti'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0086830433'	,	name:	'Kristal Djara'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0081661403'	,	name:	'Laura Fimelia Lani'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0071025291'	,	name:	'Marlin Manafe'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0088381672'	,	name:	'Marselina Akrisia Eleonora Dite'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0086102035'	,	name:	'Maryana Agustina Modok'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0081865254'	,	name:	'Michella Trivania Jovita Sine'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0087350910'	,	name:	'Mirna Belandina Missa'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0073076821'	,	name:	'Monika Kase'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0084624956'	,	name:	'Ningsi Mawarsa Pairikas'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0075220552'	,	name:	'Novantri Angelika Tefa'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0089014944'	,	name:	'Nur Hasanah Sukri'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0089527704'	,	name:	'Putri Frederica Novtry Bere'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0081412014'	,	name:	'Rosalia Rara Holi'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0076855204'	,	name:	'Selfina Tefnai'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0079160332'	,	name:	'Selfince Mariana Mbeo'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0065880752'	,	name:	'Selma Lilian Nenogasu'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0088995505'	,	name:	'Viona Prita Paila Dappa'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0089577175'	,	name:	'Yani Maria Nubatonis'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0087387027'	,	name:	'Yayang Dewelfra Nalle'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0075599981'	,	name:	'Yesri Nofrita Seu'	,	kelas:	'XII	TATA BUSANA'	,		status:	'LULUS'	},
+{	nisn:		'0084854754'	,	name:	'Aaron Jefta Riry'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0077008574'	,	name:	'Adbel Brandon Bere'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0082263947'	,	name:	'Aditia Lenga'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0086443440'	,	name:	'Adolfina Poyk'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0086276218'	,	name:	'Agustina Bili'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0081230146'	,	name:	'Athanasius Pali Corebima'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0084489695'	,	name:	'Benediktus Marsiano Gilbert Dandung'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0081968453'	,	name:	'Elisabet Mariani Feto'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0081458201'	,	name:	'Embun Sofiana Baitanu'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0086395124'	,	name:	'Gabriela Argentina Rohi'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0086718723'	,	name:	'Garaece Windrawati Adu'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0089327624'	,	name:	'Helena Sabrina Tamonob'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0088926176'	,	name:	'Izaura Da Costa Soares Alves'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0082307967'	,	name:	'Jacob Yanes Giri'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0085915015'	,	name:	'Janarto Devandri Kamlasi'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0074091722'	,	name:	'Januard Kamal Adi Putra Lopo'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0089560285'	,	name:	'Ketty Yacoba Bolle'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0079960696'	,	name:	'Kristina Afiana Sombo'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0094765522'	,	name:	'Leo Imanuel Rame'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0089912068'	,	name:	'Lidia Kaba'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0076622622'	,	name:	'Nathannael Ferdin Sugianto'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0085980582'	,	name:	'Niken Celia Anjani Gela'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0075575318'	,	name:	'Rizky Harun Barhiman Adjam'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0067835184'	,	name:	'Roberto Alvian Bia'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0084834203'	,	name:	'Romeo Fernando Sarmento'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0083328227'	,	name:	'Samuel Juankalvin Sole'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0076534978'	,	name:	'Tigris Turya Salomi Ottu'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0081109311'	,	name:	'Tri Kaleb Rustanto'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0088825469'	,	name:	'Trixell Gloryo Oktoviano Seyk'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0087116142'	,	name:	'Aliisha Atiiqah Adzraa'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0084410764'	,	name:	'Andreas Olla'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0088778376'	,	name:	'Andrey Imanuel Tasoin'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0082467661'	,	name:	'Angga Tefa'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0076657850'	,	name:	'Anggita Aulia Destianti Madjid'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0085009913'	,	name:	'Angie Tesalonika Mamo'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0084883738'	,	name:	'Cristian Renaldi Ngebu Manu'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0071818679'	,	name:	'Deanraizya Aditia Wardana'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0086291786'	,	name:	'Devon Ingwi Filipo Alextin Sine'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0075702326'	,	name:	'Febuaria Kristiani Lediana Duru'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0084975778'	,	name:	'Filipo Adipapa Nomleni'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0087579177'	,	name:	'Gerald Suryada Teguh'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0079102960'	,	name:	'Gissella Matelda Otepah'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0073622116'	,	name:	'Inovensius Irwan Neonbasu'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0084061714'	,	name:	'Intan Mardiahni Mbuilima'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0074829904'	,	name:	'Jeneiro Trisna Dini'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0084204545'	,	name:	'Jeremia Martino Bani'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0085124072'	,	name:	'Joridwan Benyamin Beti'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0083299477'	,	name:	'Juandri Bekuliu'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0098376891'	,	name:	'Maria Chyntia Marsya Naisoko'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0087622102'	,	name:	'Maria Estereyna Karmin'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0077572726'	,	name:	'Mario Antonio Joao'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0088854433'	,	name:	'Maxon Manasye Kanni Hau'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0082117474'	,	name:	'Rafly Petjumar Kiki'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0082550277'	,	name:	'Rani Prycilia Messe'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0074108556'	,	name:	'Riano Modokh'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'3052814553'	,	name:	'Rolan Yudiki Lusi'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0072773748'	,	name:	'Sera Anjelika Udju'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0059072957'	,	name:	'Sisilia Pulanga'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0078226185'	,	name:	'Stefania Agustina Obe'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0089063423'	,	name:	'Stiven Zheva Pah'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0081421896'	,	name:	'Yohanes Allfrendy Mau Seran'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0088329507'	,	name:	'Yohanes Andreyano Sika'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0084977973'	,	name:	'Yunita Imelia Lette'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0084803934'	,	name:	'Aldo Alvanzha Tosi'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0081034797'	,	name:	'Alehandro Bengu'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0088178998'	,	name:	'Alexzandra Kiara Ndoi'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0085343785'	,	name:	'Alfa Aditia Candra Saduk'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0083421487'	,	name:	'Chandra Putra Taopan'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0084139780'	,	name:	'Criston Wilson Imanuel Tang'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0086824064'	,	name:	'Ebenhezer Sonbai'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0084056926'	,	name:	'Ezra Marcelino Lay'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0088318557'	,	name:	'Fajar Obadja Ficterianus Lande'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0084841067'	,	name:	'Gensius Alehendro Fahik'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0085796867'	,	name:	'George Bryan  Adoe'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0088297823'	,	name:	'Imanuel Boymau'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0079034382'	,	name:	'Imanuel Natalis Ngongo Tanggu Bera'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'3073555850'	,	name:	'Jakli Aldison Ano'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0074470042'	,	name:	'Januario D.B. Neparasi'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0075345409'	,	name:	'Jems Arifhandi Snae'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0086852985'	,	name:	'Lorensia Febrianti Ririn'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0088536797'	,	name:	'Made Ayu Maharani'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0073295632'	,	name:	'Maya Marsanda Leo'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0075588131'	,	name:	'Michilis Osaria Hera'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0084384870'	,	name:	'Putra Darius Epi Namah'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0084402528'	,	name:	'Putri Oktaviasari'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0083886873'	,	name:	'Sarah Marselia Tapatab'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0088713833'	,	name:	'Sayla Denaya'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0089891050'	,	name:	'Selly Veronika Soares'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0073098261'	,	name:	'Seprianus Dida'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0085994559'	,	name:	'Velianti Dora Meta Sila Pelopian'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0077189904'	,	name:	'Vera Natalia Tapatab'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0088147921'	,	name:	'Verlitha Abigail Kause'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0077356529'	,	name:	'Vincencia Jenifer Numba'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0076164892'	,	name:	'Angki Alzaria Yordan Matau'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0082896807'	,	name:	'Anthonius Radja Baunsele'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0075392054'	,	name:	'Arga Seubelan'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0082373963'	,	name:	'Arini Susanti Nenu'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0087974633'	,	name:	'Delvia Nabila Amtiran'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0088544334'	,	name:	'Fransiskus Xaverius Apriliano Octavian'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0087400115'	,	name:	'Gabriel Stefanus Meka Handoyo'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0089574586'	,	name:	'Gredo Adriana Nubatonis'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'3082004849'	,	name:	'Grevan Bulan'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0075715398'	,	name:	'Intania Tamonob'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0081082104'	,	name:	'Irene Permata Adoe'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0074031956'	,	name:	'Juandi A. Leo'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0073117428'	,	name:	'Junita Stevani Manoe'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0066079301'	,	name:	'Kesya Elisabeth Labu'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0085137878'	,	name:	'Melagri Kase'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0081098464'	,	name:	'Muhammad Fahrul Dwi Andika'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0088953184'	,	name:	'Muslimah Kenedi Putri'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0087645389'	,	name:	'Natalino Arientino Soares'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0089668500'	,	name:	'Richard Petrik Malelak'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0086329173'	,	name:	'Rida Mariana Lake'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0089647270'	,	name:	'Rifaldy Putra Mowata'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0075797626'	,	name:	'Rosiana Diva Brillianti'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0077616324'	,	name:	'Susana Delsiana Blegur'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0076242257'	,	name:	'Syahril Setiawan'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0067631646'	,	name:	'Tanti Jumita Veronika Selan'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0087702891'	,	name:	'Theodora Meysa Putri Timo'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0084204755'	,	name:	'Viorin Haekase'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0087264243'	,	name:	'Wieligmans Miraciel Paula Henreite'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0085606648'	,	name:	'Willibald Maxwell Haholongan Situmoran'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+{	nisn:		'0071689927'	,	name:	'Yohana Delvina Bakker'	,	kelas:	'XII	TJKT'	,		status:	'LULUS'	},
+
+
+{	nisn:		'0082230334'	,	name:	'Putri Alexsandra Tari'	,	kelas:	'XII	KULINER'	,		status:	'LULUS'	},
+
+
+
+
+
+
+			{ nisn: '1234567899', name: 'Sheena Aulia Kwaheng Guhir', kelas: 'XII MPLB', status: 'LULUS' },
+            { nisn: '0987654321', name: 'Salmaya Ina Guhir', kelas: 'XII TKPI', status: 'LULUS' },
+			{ nisn: '0987654322', name: 'Salmaya Ina Guhir Cek', kelas: 'XII TKPI', status: 'TIDAK LULUS' },
+			
+			
+			
+			
+            { nisn: '1122334455', name: 'Silmi Asianina Dewantari', kelas: 'XII TO', status: 'TIDAK LULUS' }
+			
+			
+
+        ];
+
+        // Tanggal pengumuman
+        const announcementDate = new Date('2026-05-02T09:55:00+07:00');
+        
+        // Elements
+        const countdownDisplay = document.getElementById('countdownDisplay');
+        const waitingMessage = document.getElementById('waitingMessage');
+        const checkForm = document.getElementById('checkForm');
+        const nisnInput = document.getElementById('nisnInput');
+        const checkBtn = document.getElementById('checkBtn');
+        const result = document.getElementById('result');
+
+        // Update countdown
+        function updateCountdown() {
+            const now = new Date();
+            const timeLeft = announcementDate - now;
+
+            if (timeLeft <= 0) {
+                waitingMessage.style.display = 'none';
+                checkForm.style.display = 'block';
+                return;
+            }
+
+            const days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            countdownDisplay.innerHTML = `
+                <div class="countdown-item">
+                    <div>${days}</div>
+                    <div class="countdown-label">Hari</div>
+                </div>
+                <div class="countdown-item">
+                    <div>${hours}</div>
+                    <div class="countdown-label">Jam</div>
+                </div>
+                <div class="countdown-item">
+                    <div>${minutes}</div>
+                    <div class="countdown-label">Menit</div>
+                </div>
+                <div class="countdown-item">
+                    <div>${seconds}</div>
+                    <div class="countdown-label">Detik</div>
+                </div>
+            `;
+
+            waitingMessage.style.display = 'block';
+            checkForm.style.display = 'none';
+        }
+
+        // Check kelulusan
+        function checkGraduation() {
+            const nisn = nisnInput.value.trim().replace(/\D/g, '');
+
+            if (!nisn || nisn.length !== 10) {
+                showResult('Mohon masukkan NISN yang valid (10 digit).', 'not-found');
+                return;
+            }
+
+            checkBtn.innerHTML = '<div class="spinner"></div> Memeriksa...';
+            checkBtn.disabled = true;
+
+            setTimeout(() => {
+                const student = students.find(s => s.nisn === nisn);
+                
+                if (student) {
+                    if (student.status === 'LULUS') {
+                        showResult(student, 'success');
+                    } else {
+                        showResult(student, 'fail');
+                    }
+                } else {
+                    showResult('Data tidak ditemukan. Silakan periksa kembali NISN Anda atau hubungi pihak sekolah.', 'not-found');
+                }
+
+                checkBtn.innerHTML = '<i class="fas fa-search"></i> Cek Kelulusan';
+                checkBtn.disabled = false;
+                nisnInput.value = '';
+            }, 1500);
+        }
+
+        function showResult(data, type) {
+            result.className = `result ${type}`;
+            result.style.display = 'block';
+
+            if (typeof data === 'object') {
+                result.innerHTML = `
+                    <div>
+                        <i class="fas fa-${type === 'success' ? 'check-circle' : 'times-circle'}" style="font-size: 3rem; margin-bottom: 15px;"></i>
+                        <div style="font-size: 1.4rem; margin-bottom: 20px;">
+                            ${type === 'success' ? 'Selamat, Anda dinyatakan LULUS.' : 'Mohon maaf, Anda dinyatakan TIDAK LULUS.'}
+                        </div>
+                        <div class="result-details">
+                            <div class="detail-row">
+                                <span><i class="fas fa-user"></i> Nama:</span>
+                                <span>${data.name}</span>
+                            </div>
+                            <div class="detail-row">
+                                <span><i class="fas fa-id-card"></i> NISN:</span>
+                                <span>${data.nisn}</span>
+                            </div>
+                            <div class="detail-row">
+                                <span><i class="fas fa-school"></i> Kelas:</span>
+                                <span>${data.kelas}</span>
+                            </div>
+                            <div class="detail-row">
+                                <span><i class="fas fa-${type === 'success' ? 'award' : 'ban'}"></i> Status:</span>
+                                <span style="color: ${type === 'success' ? '#10b981' : '#ef4444'}">${data.status}</span>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            } else {
+                result.innerHTML = `
+                    <i class="fas fa-exclamation-triangle" style="font-size: 3rem; margin-bottom: 15px;"></i>
+                    ${data}
+                `;
+            }
+        }
+
+        // Event listeners
+        checkBtn.addEventListener('click', checkGraduation);
+        nisnInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                checkGraduation();
+            }
+        });
+
+        // Initialize
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
+
+        // Fallback jika logo tidak load
+        document.querySelector('.logo img').onerror = function() {
+            this.src = 'data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwIiBoZWlnaHQ9IjEwMCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48cmVjdCB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSIjZjU5ZTAyIiByeD0iMTUiIHJ5PSIxNSIvPjx0ZXh0IHg9IjUwJSIgeT0iNTAlIiBmb250LWZhbWlseT0iQXJpYWwiIGZvbnQtd2VpZ2h0PSIxMDAwIiBmb250LXNpemU9IjE0IiBmaWxsPSJ3aGl0ZSIgdGV4dC1hbmNob3I9Im1pZGRsZSIgZHk9Ii4zZW0iPlNNS04yPC90ZXh0Pjwvc3ZnPg==';
+        };
+    </script>
+</body>
+</html>
